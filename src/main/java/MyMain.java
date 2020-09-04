@@ -3,32 +3,25 @@ import java.util.Scanner;
 public class MyMain {
     // Calculates the median of the three inputs
     public static int median(final int a, final int b, final int c) {
-        
         int sum = a + b + c;
         return (sum - Math.max(a,Math.max(b,c)) - Math.min(a,Math.min(b,c)));
-        
-
     }
 
     // Returns the input with the larger absolute value
-    public static int magnitude(final int a, final int b) {
-        
+    public static int magnitude(final int a, final int b) {   
         if (Math.max (Math.abs(a), Math.abs(b)) == Math.abs(a)) {
             return a;
         }
         else{
             return b;
         }
-        
     }
 
     // Returns the "c" value from the Pythagorean theorem "a^2 + b^2 = c^2",
     // where "a" and "b" are the inputs to the method
     public static double pythagoras(final int a, final int b) {
-
         double x = Math.sqrt(Math.pow(a,2) + Math.pow(b,2));
         return (x);
-
     }
 
     public static void main(final String[] args) {
@@ -50,8 +43,8 @@ public class MyMain {
             System.out.println("c =");
             int cc = scan.nextInt();
             System.out.println("The median of those numbers is " + Integer.toString(median(aa,bb,cc)));
-            
         }
+
         else if (action.equals("ma")){
             System.out.println("This function takes 2 int inputs. Put one per line.");
             System.out.println("a =");
@@ -60,6 +53,7 @@ public class MyMain {
             int bb = scan.nextInt();
             System.out.println("The number with the greatest absolute value here is " + Integer.toString(magnitude(aa,bb)));
         }
+
         else if (action.equals("py")){
             System.out.println("This function takes 2 int inputs. Put one per line.");
              System.out.println("a =");
@@ -68,10 +62,11 @@ public class MyMain {
             int bb = scan.nextInt();
             System.out.println("The hypotenuse of a right triangle with those legs is " + Double.toString(pythagoras(aa,bb)));
         }
+
         else{
             System.out.println("Something went wrong. Try running the program again.");
         }
+
         scan.close();
-        // YOUR CODE HERE
     }
 }
